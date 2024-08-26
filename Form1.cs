@@ -182,6 +182,7 @@ namespace Directory1
         {
             if (listBox1.SelectedIndex >= 0)
             {
+                // deneme github
                 //Directory.GetParent("C:\\Deneme1\\temp");
                 Directory.GetParent("C:\\Deneme1\\temp");
 
