@@ -180,20 +180,29 @@ namespace Directory1
 
         private void button6_Click(object sender, EventArgs e)
         {
-           //Directory.GetParent("C:\\Deneme1\\temp");
-           Directory.GetParent("C:\\Deneme1\\temp");
+            if (listBox1.SelectedIndex >= 0)
+            {
+                //Directory.GetParent("C:\\Deneme1\\temp");
+                Directory.GetParent("C:\\Deneme1\\temp");
 
-            //System.IO.DirectoryInfo directoryInfo =
-            //        System.IO.Directory.GetParent(path);
+                //System.IO.DirectoryInfo directoryInfo =
+                //        System.IO.Directory.GetParent(path);
 
-            //System.Console.WriteLine(directoryInfo.FullName);
+                //System.Console.WriteLine(directoryInfo.FullName);
 
-            //string path1 = "C:\\Deneme1\\temp";
-            string path1 = (@""+text1+"");
-            System.IO.DirectoryInfo directoryInfo =
-                   System.IO.Directory.GetParent(path1);
-            label4.Text = directoryInfo.Name;
+                //string path1 = "C:\\Deneme1\\temp";
+                string path1 = (@""+text1+"");
+                System.IO.DirectoryInfo directoryInfo =
+                       System.IO.Directory.GetParent(path1);
+                label4.Text = directoryInfo.Name;
+            }
+            else
+            {
+                listBox1.Items.Clear();
 
+                string message = "Directory is not selected";
+                listBox1.Items.Add(message);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
